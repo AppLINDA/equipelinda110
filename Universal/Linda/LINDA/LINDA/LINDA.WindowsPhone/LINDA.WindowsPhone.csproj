@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DAC05300-2D78-48BF-BF40-3D46EA03657C}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LINDA</RootNamespace>
+    <AssemblyName>LINDA.WindowsPhone</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{76F1466A-8B6D-4E39-A767-685A06062A39};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\ActivesModel.cs" />
+    <Compile Include="ViewModel\AlimentoView.cs" />
+    <Compile Include="ViewModel\AlimentoViewModel.cs" />
+    <Compile Include="ViewModel\AlmocoView.cs" />
+    <Compile Include="ViewModel\AlmocoViewModel.cs" />
+    <Compile Include="ViewModel\AvatarView.cs" />
+    <Compile Include="ViewModel\AvatarViewmodel.cs" />
+    <Compile Include="ViewModel\CafedaManhaView.cs" />
+    <Compile Include="ViewModel\CafedaManhaViewModel.cs" />
+    <Compile Include="ViewModel\CalendarioGeralView.cs" />
+    <Compile Include="ViewModel\CalendarioGeralViewModel.cs" />
+    <Compile Include="ViewModel\CalendarioporMesView.cs" />
+    <Compile Include="ViewModel\DiasDaSemana.cs" />
+    <Compile Include="ViewModel\DiasDaSemanaViewModel.cs" />
+    <Compile Include="ViewModel\Geo\AngleConverter.cs" />
+    <Compile Include="ViewModel\Geo\DistanceConverter.cs" />
+    <Compile Include="ViewModel\Geo\DistanceUnit.cs" />
+    <Compile Include="ViewModel\Geo\GeoConstants.cs" />
+    <Compile Include="ViewModel\Geo\IAngleConverter.cs" />
+    <Compile Include="ViewModel\Geo\IBearingCalculator.cs" />
+    <Compile Include="ViewModel\Geo\IDistanceCalculator.cs" />
+    <Compile Include="ViewModel\Geo\IDistanceConverter.cs" />
+    <Compile Include="ViewModel\Geo\IRhumbBearingCalculator.cs" />
+    <Compile Include="ViewModel\Geo\IRhumbDistanceCalculator.cs" />
+    <Compile Include="ViewModel\Geo\Position.cs" />
+    <Compile Include="ViewModel\Geo\PositionHandler.cs" />
+    <Compile Include="ViewModel\JantaView.cs" />
+    <Compile Include="ViewModel\JantaViewModel.cs" />
+    <Compile Include="ViewModel\LanchedaManhaView.cs" />
+    <Compile Include="ViewModel\LanchedaManhaViewModel.cs" />
+    <Compile Include="ViewModel\LanchedaNoiteView.cs" />
+    <Compile Include="ViewModel\LanchedaNoiteViewModel.cs" />
+    <Compile Include="ViewModel\LanchedaTardeView.cs" />
+    <Compile Include="ViewModel\LanchedaTardeViewModel.cs" />
+    <Compile Include="ViewModel\MaratonaView.cs" />
+    <Compile Include="ViewModel\MaratonaViewModel.cs" />
+    <Compile Include="ViewModel\MassaView.cs" />
+    <Compile Include="ViewModel\MassaViewModel.cs" />
+    <Compile Include="ViewModel\MontapratoView.cs" />
+    <Compile Include="ViewModel\MontapratoViewModel.cs" />
+    <Compile Include="ViewModel\NutricionistaView.cs" />
+    <Compile Include="ViewModel\NutricionistaViewModel.cs" />
+    <Compile Include="ViewModel\PerfilView.cs" />
+    <Compile Include="ViewModel\PerfilViewModel.cs" />
+    <Compile Include="ViewModel\SemanaView.cs" />
+    <Compile Include="ViewModel\SemanaViewModel.cs" />
+    <Compile Include="ViewModel\ValidarComponentes.cs" />
+    <Compile Include="View\AvatarInteracao.xaml.cs">
+      <DependentUpon>AvatarInteracao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CalendarioUtil\CtrlCalendarioRefeicaopor2.xaml.cs">
+      <DependentUpon>CtrlCalendarioRefeicaopor2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CalendarioUtil\CtrlCalendarioRefeicaopor4.xaml.cs">
+      <DependentUpon>CtrlCalendarioRefeicaopor4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CalendarioUtil\FrmDietapratoControl.xaml.cs">
+      <DependentUpon>FrmDietapratoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmAlarme.xaml.cs">
+      <DependentUpon>FrmAlarme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCadastroPerfilPasso01.xaml.cs">
+      <DependentUpon>FrmCadastroPerfilPasso01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCadastroPerfilPasso02.xaml.cs">
+      <DependentUpon>FrmCadastroPerfilPasso02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCalendario.xaml.cs">
+      <DependentUpon>FrmCalendario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmDadosRefeicao.xaml.cs">
+      <DependentUpon>FrmDadosRefeicao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmDadosRefeicaoControl.xaml.cs">
+      <DependentUpon>FrmDadosRefeicaoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmEscolherApelido.xaml.cs">
+      <DependentUpon>FrmEscolherApelido.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmEscolherAvatar.xaml.cs">
+      <DependentUpon>FrmEscolherAvatar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmMaratona.xaml.cs">
+      <DependentUpon>FrmMaratona.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmMenuInicial.xaml.cs">
+      <DependentUpon>FrmMenuInicial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmNutricionista.xaml.cs">
+      <DependentUpon>FrmNutricionista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmNutricionistaInformacoes.xaml.cs">
+      <DependentUpon>FrmNutricionistaInformacoes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmPaginaInicial.xaml.cs">
+      <DependentUpon>FrmPaginaInicial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmTermosDeUso.xaml.cs">
+      <DependentUpon>FrmTermosDeUso.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmTutorial.xaml.cs">
+      <DependentUpon>FrmTutorial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\GraficoUtil\FrmGraficoLINDA.xaml.cs">
+      <DependentUpon>FrmGraficoLINDA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MontaPratoUtil\FrmAlmoco.xaml.cs">
+      <DependentUpon>FrmAlmoco.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MontaPratoUtil\FrmCafedaManha.xaml.cs">
+      <DependentUpon>FrmCafedaManha.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MontaPratoUtil\FrmCopo.xaml.cs">
+      <DependentUpon>FrmCopo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MontaPratoUtil\FrmDiasSemana.xaml.cs">
+      <DependentUpon>FrmDiasSemana.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MontaPratoUtil\FrmFrutas.xaml.cs">
+      <DependentUpon>FrmFrutas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MontaPratoUtil\FrmGraoIntegral.xaml.cs">
+      <DependentUpon>FrmGraoIntegral.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MontaPratoUtil\FrmJanta.xaml.cs">
+      <DependentUpon>FrmJanta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MontaPratoUtil\FrmLanchedaManha.xaml.cs">
+      <DependentUpon>FrmLanchedaManha.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MontaPratoUtil\FrmLanchedaNoite.xaml.cs">
+      <DependentUpon>FrmLanchedaNoite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MontaPratoUtil\FrmLanchedaTarde.xaml.cs">
+      <DependentUpon>FrmLanchedaTarde.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MontaPratoUtil\FrmMontaPrato.xaml.cs">
+      <DependentUpon>FrmMontaPrato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MontaPratoUtil\FrmPaoCereal.xaml.cs">
+      <DependentUpon>FrmPaoCereal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MontaPratoUtil\FrmProteinas.xaml.cs">
+      <DependentUpon>FrmProteinas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MontaPratoUtil\FrmVegetais.xaml.cs">
+      <DependentUpon>FrmVegetais.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="View\AvatarInteracao.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\CalendarioUtil\CtrlCalendarioRefeicaopor2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\CalendarioUtil\CtrlCalendarioRefeicaopor4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\CalendarioUtil\FrmDietapratoControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\FrmAlarme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\FrmCadastroPerfilPasso01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\FrmCadastroPerfilPasso02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\FrmCalendario.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\FrmDadosRefeicao.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\FrmDadosRefeicaoControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\FrmEscolherApelido.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\FrmEscolherAvatar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\FrmMaratona.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\FrmMenuInicial.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\FrmNutricionista.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\FrmNutricionistaInformacoes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\FrmPaginaInicial.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\FrmTermosDeUso.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\FrmTutorial.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\GraficoUtil\FrmGraficoLINDA.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MontaPratoUtil\FrmAlmoco.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MontaPratoUtil\FrmCafedaManha.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MontaPratoUtil\FrmCopo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MontaPratoUtil\FrmDiasSemana.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MontaPratoUtil\FrmFrutas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MontaPratoUtil\FrmGraoIntegral.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MontaPratoUtil\FrmJanta.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MontaPratoUtil\FrmLanchedaManha.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MontaPratoUtil\FrmLanchedaNoite.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MontaPratoUtil\FrmLanchedaTarde.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MontaPratoUtil\FrmMontaPrato.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MontaPratoUtil\FrmPaoCereal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MontaPratoUtil\FrmProteinas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MontaPratoUtil\FrmVegetais.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AppBar\add.png" />
+    <Content Include="Assets\AppBar\check.png" />
+    <Content Include="Assets\AppBar\edit.png" />
+    <Content Include="Assets\AppBar\feature.phone.png" />
+    <Content Include="Assets\AppBar\folder.png" />
+    <Content Include="Assets\AppBar\minus.png" />
+    <Content Include="Assets\AppBar\next.png" />
+    <Content Include="Assets\AppBar\refresh.png" />
+    <Content Include="Assets\AppBar\save.png" />
+    <Content Include="Assets\AppBar\transport.pause.png" />
+    <Content Include="Assets\AppBar\transport.play.png" />
+    <Content Include="Assets\FatiasNovas\copoDeAgua.png" />
+    <Content Include="Assets\FatiasNovas\LANCHEFrutas.png" />
+    <Content Include="Assets\FatiasNovas\LANCHEPaesCereais.png" />
+    <Content Include="Assets\FatiasNovas\pratDividido.png" />
+    <Content Include="Assets\FatiasNovas\pratDividido2.png" />
+    <Content Include="Assets\FatiasNovas\pratFrutas.png" />
+    <Content Include="Assets\FatiasNovas\pratGraos.png" />
+    <Content Include="Assets\FatiasNovas\pratoNormal.png" />
+    <Content Include="Assets\FatiasNovas\pratProteinas.png" />
+    <Content Include="Assets\FatiasNovas\pratVegetais.png" />
+    <Content Include="Assets\Fatias\Copos\Leite.jpg" />
+    <Content Include="Assets\Fatias\Frutas\Apple_Icon.png" />
+    <Content Include="Assets\Fatias\Frutas\Banana_Icon.png" />
+    <Content Include="Assets\Fatias\Frutas\Goiaba.jpg" />
+    <Content Include="Assets\Fatias\Frutas\Grape_Icon.jpg" />
+    <Content Include="Assets\Fatias\Frutas\Manga.jpg" />
+    <Content Include="Assets\Fatias\Frutas\Papaya_Icon.jpg" />
+    <Content Include="Assets\Fatias\Frutas\Pear_Icon.png" />
+    <Content Include="Assets\Fatias\Frutas\Pineapple_Icon.jpg" />
+    <Content Include="Assets\Fatias\Frutas\Pine_Apple_Icon.png" />
+    <Content Include="Assets\Fatias\Frutas\Slice_Apple_Icon.jpg" />
+    <Content Include="Assets\Fatias\Frutas\Slice_Orange.png" />
+    <Content Include="Assets\Fatias\Frutas\Slice_Pear_Icon.png" />
+    <Content Include="Assets\Fatias\Frutas\Slice_Strawberry_Icon.png" />
+    <Content Include="Assets\Fatias\Frutas\Slice_Watermelon.png" />
+    <Content Include="Assets\Fatias\Frutas\Strawberry_Icon.png" />
+    <Content Include="Assets\Fatias\Graos\Arroz.jpg" />
+    <Content Include="Assets\Fatias\Graos\feijao-todos-tipos.jpg" />
+    <Content Include="Assets\Fatias\Graos\Feijao.jpg" />
+    <Content Include="Assets\Fatias\Paes\Granola.jpg" />
+    <Content Include="Assets\Fatias\Paes\Linhaça.jpg" />
+    <Content Include="Assets\Fatias\prat4PartesFrutas.png" />
+    <Content Include="Assets\Fatias\prat4PartesGraos.png" />
+    <Content Include="Assets\Fatias\prat4PartesProteinas.png" />
+    <Content Include="Assets\Fatias\prat4PartesVegetais.png" />
+    <Content Include="Assets\Fatias\Vegetais\Agriao.jpg" />
+    <Content Include="Assets\Fatias\Vegetais\Alface.jpg" />
+    <Content Include="Assets\Fatias\Vegetais\Beterraba.jpg" />
+    <Content Include="Assets\Fatias\Vegetais\Brocolis.jpg" />
+    <Content Include="Assets\Fatias\Vegetais\Couve.jpg" />
+    <Content Include="Assets\Fatias\Vegetais\Espinafre.jpg" />
+    <Content Include="Assets\Fatias\Vegetais\Quiabo.jpg" />
+    <Content Include="Assets\Images\Avatar1.png" />
+    <Content Include="Assets\Images\Avatar2.png" />
+    <Content Include="Assets\Images\Avatar3.png" />
+    <Content Include="Assets\Images\Check_rosa.png" />
+    <Content Include="Assets\Images\copoDeAgua1.png" />
+    <Content Include="Assets\Images\fatia01.png" />
+    <Content Include="Assets\Images\fatia02.png" />
+    <Content Include="Assets\Images\fatia03.png" />
+    <Content Include="Assets\Images\fatia04.png" />
+    <Content Include="Assets\Images\fatiazona.png" />
+    <Content Include="Assets\Images\Icon.png" />
+    <Content Include="Assets\Images\Icone.jpg" />
+    <Content Include="Assets\Images\Mulher.png" />
+    <Content Include="Assets\Images\prat4PartesFrutas.png" />
+    <Content Include="Assets\Images\prat4PartesGraos.png" />
+    <Content Include="Assets\Images\prat4PartesProteinas.png" />
+    <Content Include="Assets\Images\prat4PartesVegetais.png" />
+    <Content Include="Assets\Images\pratDividido02.png" />
+    <Content Include="Assets\Images\pratDividido04 - Copia.png" />
+    <Content Include="Assets\Images\pratoDivididoNormal.png" />
+    <Content Include="Assets\Images\Qparte1.png" />
+    <Content Include="Assets\Images\Qparte2.png" />
+    <Content Include="Assets\Images\Qparte3.png" />
+    <Content Include="Assets\Images\Qparte4.png" />
+    <Content Include="Assets\Nutricionistas\Karol.png" />
+    <Content Include="Assets\Tiles\alarme.jpg" />
+    <Content Include="Assets\Tiles\almoco_Linda.png" />
+    <Content Include="Assets\Tiles\cafeDaManha.png" />
+    <Content Include="Assets\Tiles\calendario.png" />
+    <Content Include="Assets\Tiles\calendario1234.png" />
+    <Content Include="Assets\Tiles\calendario12345.png" />
+    <Content Include="Assets\Tiles\copoDeAgua.png" />
+    <Content Include="Assets\Tiles\grafico_Linda.jpg" />
+    <Content Include="Assets\Tiles\hubCalendario.png" />
+    <Content Include="Assets\Tiles\hubCalendario1.png" />
+    <Content Include="Assets\Tiles\jantar.png" />
+    <Content Include="Assets\Tiles\maratona_Linda.jpg" />
+    <Content Include="Assets\Tiles\montaprato_Linda.png" />
+    <Content Include="Assets\Tiles\nutricionista_Linda.png" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetPlatformIdentifier)' == '' ">
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+  </PropertyGroup>
+  <Import Project="..\LINDA.Shared\LINDA.Shared.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

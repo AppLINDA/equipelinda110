@@ -1,0 +1,175 @@
+﻿<UserControl x:Class="LINDA.View.CalendarioUtil.FrmDietapratoControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:LINDA.View.CalendarioUtil"
+             FontFamily="{StaticResource PhoneFontFamilyNormal}"
+             FontSize="{StaticResource PhoneFontSizeNormal}"
+             Foreground="{StaticResource PhoneForegroundBrush}" 
+             Width="458" Height="500">
+
+    <Grid Background="White" Width="456">
+        <!-- Definição do layout monta-prato. -->
+        <Grid x:Name="grdMontaPrato" Width="456" Height="500" >
+            <Grid x:Name="hubRefeicoes">
+                <!-- CAFÉ DA MANHÃ -->
+                <Grid Margin="10,0,252,337">
+                    <Grid Width="153" Height="140" Margin="3,3" 
+                          Tap="Cafedamanha_Tap">
+                        <local:CtrlCalendarioRefeicaopor2 Grid.Row="0" Name="Ctrlprato_cafedamanha" 
+                                                      Tap="Cafedamanha_Tap"/>
+                        <TextBlock  Opacity="0.2"
+                            Text="Café da Manhã"
+									FontSize="17"
+									Foreground="#FFF97A6D"
+									HorizontalAlignment="Right"
+									Width="153" Height="32" 
+									VerticalAlignment="Bottom"
+									TextAlignment="Center"/>
+                        <Border BorderBrush="#FFF97A6D" BorderThickness="3"
+                        	VerticalAlignment="Top" 
+                        	HorizontalAlignment="Left" 
+                        	Background="White" 
+                        	Width="153" Height="140" Opacity="0.1"
+                                Tap="Cafedamanha_Tap">
+                            <Grid x:Name="hubCafeManha"                                     
+                        		Margin="7,7,7,32"
+                        		Cursor="Hand" Height="Auto" Width="Auto" Tap="Cafedamanha_Tap">
+                                <Grid.Background>
+                                    <ImageBrush Stretch="Uniform" 
+                        				ImageSource="/Assets/Tiles/cafeDaManha.png"/>
+                                </Grid.Background>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Grid>
+                <!-- LANCHE DA MANHÃ -->
+                <Grid Margin="252,0,10,337">
+                    <Grid Width="153" Height="140" Margin="3,3">
+                        <local:CtrlCalendarioRefeicaopor2 Grid.Row="0" Name="Ctrlprato_lanchedamanha" Tap="Lanchedamanha_Tap"/>
+                        <Border BorderBrush="#FFF97A6D" BorderThickness="3" Opacity="0.1"
+									VerticalAlignment="Top" 
+									HorizontalAlignment="Left" 
+									Background="White" 
+									Width="153" Height="140" Tap="Lanchedamanha_Tap">
+                            <Grid x:Name="hubLancheManha"
+										    Margin="7,7,7,32"
+										    Cursor="Hand" Height="Auto" Width="Auto" Tap="Lanchedamanha_Tap">
+                                <Grid.Background>
+                                    <ImageBrush Stretch="Uniform" ImageSource="/Assets/Tiles/cafeDaManha.png"/>
+                                </Grid.Background>
+                            </Grid>
+                        </Border>
+                        <TextBlock Text="Lanche da Manhã" Opacity="0.2"
+									FontSize="17"
+									Foreground="#FFF97A6D"
+									HorizontalAlignment="Right"
+									Width="153" Height="32" 
+									VerticalAlignment="Bottom" TextAlignment="Center"
+                                   Tap="Lanchedamanha_Tap"/>
+                    </Grid>
+                </Grid>
+                <!--Almoço-->
+                <Grid  Margin="10,165,252,172">
+                    <Grid Width="153" Height="140" Margin="3,3">
+                        <local:CtrlCalendarioRefeicaopor4 Grid.Row="0" Name="Ctrlprato_almoco" Tap="Almoco_Tap"/>
+                        <Border BorderBrush="#FFF97A6D" BorderThickness="3" Opacity="0.1">
+                            <Grid x:Name="hubAlmoco" 
+									Margin="7,7,7,32"
+									Width="Auto" Height="Auto" Tap="Almoco_Tap">
+                                <Grid.Background>
+                                    <ImageBrush Stretch="Uniform" ImageSource="/Assets/Tiles/almoco_Linda.png"/>
+                                </Grid.Background>
+                            </Grid>
+                        </Border >
+                        <TextBlock Text="Almoço" Opacity="0.2"
+								FontSize="17"
+								Foreground="#FFF97A6D"
+								HorizontalAlignment="Right"
+								Width="153" Height="32" 
+								VerticalAlignment="Bottom" TextAlignment="Center"
+                                   Tap="Almoco_Tap"/>
+                    </Grid>
+                </Grid>
+                <!-- Lanche da Tarde -->
+                <Grid Margin="252,165,10,172">
+                    <Grid Width="153" Height="140" Margin="3,3">
+                        <local:CtrlCalendarioRefeicaopor2 Grid.Row="0" Name="Ctrlprato_lanchedatarde" Tap="Lanchedatarde_Tap"/>
+                        <Border BorderBrush="#FFF97A6D" BorderThickness="3" Opacity="0.1" Tap="Lanchedatarde_Tap">
+                            <Grid x:Name="hubLancheTarde" 
+		    								Margin="7,7,7,32" Cursor="Hand" Height="Auto" Width="Auto"
+                                        Tap="Lanchedatarde_Tap">
+                                <Grid.Background>
+                                    <ImageBrush Stretch="Uniform" 
+								    				ImageSource="/Assets/Tiles/cafeDaManha.png"/>
+                                </Grid.Background>
+                            </Grid>
+                        </Border>
+                        <TextBlock Text="Lanche da Tarde" Opacity="0.2"
+									    FontSize="17"
+									    Foreground="#FFF97A6D"
+								    	HorizontalAlignment="Right"
+							    		Width="153" Height="32" 
+						    			VerticalAlignment="Bottom" 
+					    				TextAlignment="Center"
+                                   Tap="Lanchedatarde_Tap"/>
+                    </Grid>
+                </Grid>
+                <!-- Janta -->
+                <Grid Margin="10,333,252,4">
+                    <Grid Name="Gridjantar" Width="153" Height="140" Margin="3,3">
+                        <local:CtrlCalendarioRefeicaopor4 Grid.Row="0" Name="Ctrlprato_janta" Tap="Janta_Tap"/>
+                        <Border BorderBrush="#FFF97A6D" BorderThickness="3" Opacity="0.1" Tap="Janta_Tap">
+                            <Grid x:Name="hubJanta"                                     
+									    Margin="7,7,7,32"
+									    Cursor="Hand"
+									    Height="Auto" Width="Auto"
+                                             Tap="Janta_Tap">
+                                <Grid.Background>
+                                    <ImageBrush Stretch="Uniform"
+											    ImageSource="/Assets/Tiles/almoco_Linda.png"/>
+                                </Grid.Background>
+                            </Grid>
+                        </Border>
+                        <TextBlock Text="Janta" Opacity="0.2"
+								    FontSize="17"
+								    Foreground="#FFF97A6D"
+								    HorizontalAlignment="Right"
+								    Width="153" Height="32" 
+								    VerticalAlignment="Bottom" TextAlignment="Center"
+                                   Tap="Janta_Tap"/>
+                    </Grid>
+                </Grid>
+                <!-- Lanche da Noite-->
+                <Grid Margin="252,333,10,4">
+                    <Grid Width="153" Height="140" Margin="3,3">
+                        <local:CtrlCalendarioRefeicaopor2 Grid.Row="0" Name="Ctrlprato_lanchedanoite" Tap="Lanchedanoite_Tap"/>
+                        <Border BorderBrush="#FFF97A6D" BorderThickness="3" Opacity="0.1"  Tap="Lanchedanoite_Tap">
+                            <Grid x:Name="hubLancheNoite" 
+										    Margin="7,7,7,32"
+										    Cursor="Hand"
+										    Height="Auto" Width="Auto"             
+										      Tap="Lanchedanoite_Tap">
+                                <Grid.Background>
+                                    <ImageBrush Stretch="Uniform"
+												    ImageSource="/Assets/Tiles/cafeDaManha.png"/>
+                                </Grid.Background>
+                            </Grid>
+                        </Border>
+                        <TextBlock Opacity="0.2"
+                            Text="Lanche da Noite"
+									    FontSize="17"
+									    Foreground="#FFF97A6D"
+									    HorizontalAlignment="Right"
+									    Width="153" Height="32" 
+									    VerticalAlignment="Bottom" TextAlignment="Center"
+                                    Tap="Lanchedanoite_Tap"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

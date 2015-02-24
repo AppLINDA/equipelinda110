@@ -1,0 +1,21 @@
+﻿<Page
+    Loaded="PhoneApplicationPage_Loaded"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local ="using:LINDA.View"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d" 
+	x:Class="LINDA.View.FrmPaginaInicial"
+	>
+    <Grid x:Name="grdBase" Background="White">
+        <Grid x:Name="grdBackGround" Background="#FFF97A6D"/>
+        <TextBlock x:Name="txtBlockNomeProduto" Text="Linda" FontFamily="Segoe UI Semilight" Foreground="White" FontSize="80" 
+                   Margin="6,499,-6,58" TextWrapping="Wrap" TextAlignment="Center" FontStyle="Italic" />
+        <TextBlock x:Name="txtSlogan" Text="O seu maior bem é você" FontFamily="Segoe UI Semilight" Foreground="White" FontSize="30"
+                   Margin="0,583,0,9" TextWrapping="Wrap" TextAlignment="Center" FontStyle="Italic" />
+        <Image x:Name="imgBrand" Source="/Assets/Images/Icone.jpg" Margin="31,46,42,190" />
+    </Grid>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+</Page>

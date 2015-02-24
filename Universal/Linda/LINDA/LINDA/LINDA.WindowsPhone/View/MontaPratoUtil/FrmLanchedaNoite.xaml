@@ -1,0 +1,82 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="LINDA.View.MontaPratoUtil.FrmLanchedaNoite"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0">
+            <Grid x:Name="grdHeader" Background="#FFF97A6D" Height="100">
+                <TextBlock x:Name="txtTitulo1" Text="monta-prato" Margin="88,18,50,0" 
+                           TextWrapping="Wrap" FontSize="60" FontFamily="Segoe UI Semilight"
+                           Foreground="White" TextAlignment="Center"
+                           Height="62" VerticalAlignment="Top"/>
+                <Image x:Name="imgLogo1" Source="/Assets/Images/Mulher.png"
+                       HorizontalAlignment="Left" Width="107" Height="98"
+                       VerticalAlignment="Top" Margin="0,2,0,0"/>
+            </Grid>
+        </StackPanel>
+
+        <!--Lanche tarde-->
+        <Grid Name="grdLanchedaTarde" Visibility="Visible" Height="298" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="266" Margin="0,0,42,162" Grid.Row="1">
+            <Grid.Background>
+                <ImageBrush Stretch="Fill"
+                                        ImageSource="/Assets/Images/pratDividido02.png"/>
+            </Grid.Background>
+            <Image Name="imgLANCHEPaesCereais"
+                               Tap="imgLANCHETardePaesCereais_Tap"
+                               HorizontalAlignment="Left" Height="96" Margin="30,31,0,0"
+                               VerticalAlignment="Top" Width="210"
+                               Source="/Assets/Fatias/prat4PartesGraos.png"
+                               Stretch="Fill"/>
+            <Image Name="imgLANCHEFrutas"  
+                               MouseEnter="imgLANCHETardeFrutas_MouseEnter" 
+                               HorizontalAlignment="Left" Height="86"
+                               Margin="30,153,0,0" VerticalAlignment="Top"
+                               Width="210"
+                               Source="/Assets/Fatias/prat4PartesFrutas.png"
+                               Stretch="Fill"/>
+        </Grid>
+        <!--Fim Lanche tarde-->
+
+        <!-- Definição do componente COPO -->
+        <Grid x:Name="grdCopo" Margin="33,228,342,180" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="37*"/>
+                <RowDefinition Height="39*"/>
+            </Grid.RowDefinitions>
+            <Image Name="imgcopo"
+                           Source="/Assets/Images/copoDeAgua1.png"
+                           Height="162" VerticalAlignment="Top" Stretch="Fill" Grid.RowSpan="2" HorizontalAlignment="Left" Width="105" Tap="imgcopo_Tap"/>
+        </Grid>
+        <!-- Fim do componente COPO -->
+
+        <TextBlock x:Name="txtTituloLanchedaNoite" FontSize="45" Text="lanche da noite" Foreground="#FFF97A6D" HorizontalAlignment="Left" Height="53" Margin="33,29,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="364" Grid.Row="1"/>
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True"
+                              BackgroundColor="#FFF97A6D">
+            <shell:ApplicationBarIconButton x:Name="btnSalvar"                
+                IconUri="/Assets/AppBar/save.png" Text="Salvar" 
+                IsEnabled="True" 
+               Click="btnSalvar_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>
